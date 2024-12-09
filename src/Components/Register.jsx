@@ -4,13 +4,13 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 const Register = () => {
 
-    const createUser =useContext(AuthContext);
+    const {createUser} = useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
-        const password = e.target.password;
+        const password = e.target.password.value;
         console.log(email, password, name);
 
         // create user in firebase
